@@ -4,7 +4,8 @@
   "description": "Crowdmap is a heat map that displays street congestion.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "nodemon app.js",
+    "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
