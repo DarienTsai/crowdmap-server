@@ -14,11 +14,17 @@ const io = require('socket.io')(http);
 var PORT = 5000;
 
 // Sample data for demo
-var sample = {};
+var base = [33.9987, 117.9470];
+const samples = require('./samples');
+
+var sample = samples(base); 
 
 // Connection test route
 express.get("/", (req, res) => {
-  res.json({status: "connected"});
+  res.json({
+    status: "connected",
+    data: sample
+  });
 });
 
 // user opens app
