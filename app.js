@@ -10,6 +10,6 @@ express.get("/", (req, res) => {
   res.json({status: "connected"});
 });
 
-http.listen(PORT, ()=>{
+http.listen(process.env.PORT || PORT, ()=>{
   console.log("running on ", PORT);
 });
