@@ -17,7 +17,6 @@ var PORT = 5000;
 var base = [33.9987, 117.9470];
 const samples = require('./samples');
 
-var sample = samples(base); 
 
 // Connection test route
 express.get("/", (req, res) => {
@@ -32,8 +31,7 @@ io.on('connect', (socket) => {
 
   console.log("connect");
 
-  // add new location, Send data + sample data
-  console.log("connected");
+  socket.emit('get', samples(base));
 
   // user moves
   socket.on("update", (data) => {

@@ -2,9 +2,9 @@
 module.exports =  function samples(base){
   let vals = [];
   let deviation = 0;
-  for( i = 0; i < 100; i ++){
-    deviationx = (Math.random() * 10) - 5;
-    deviationy = (Math.random() * 10) - 5;
+  for( i = 0; i < 200; i ++){
+    deviationx = (Math.random() * 2) - 1;
+    deviationy = (Math.random() * 2) - 1;
     vals.push([base[0] + deviationx, base[1] + deviationy]);
   }
 
