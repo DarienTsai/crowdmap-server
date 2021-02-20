@@ -22,7 +22,7 @@ const samples = require('./samples');
 express.get("/", (req, res) => {
   res.json({
     status: "connected",
-    data: sample
+    data: samples(base)
   });
 });
 
