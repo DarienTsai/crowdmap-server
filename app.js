@@ -14,7 +14,7 @@ const io = require('socket.io')(http);
 var PORT = 5000;
 
 // Sample data for demo
-var base = [33.9987, 117.9470];
+var base = [33.9987, -117.9470];
 const samples = require('./samples');
 
 
