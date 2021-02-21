@@ -31,7 +31,12 @@ io.on('connect', (socket) => {
 
   console.log("connect");
 
-  socket.emit('get', samples(base));
+  datas = [];
+  for(let i = 0; i < 24; i ++){
+    datas.push(samples(base));
+  }
+
+  socket.emit('get', datas);
 
   // user moves
   socket.on("update", (data) => {
