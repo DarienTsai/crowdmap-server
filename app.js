@@ -33,7 +33,7 @@ io.on('connect', (socket) => {
 
   let sampleData = [];
   for( let i = 0; i < 24; i++){
-    data.push(samples(base));
+    sampleData.push(samples(base));
   }
   socket.emit('get', sampleData);
 
