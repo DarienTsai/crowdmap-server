@@ -31,12 +31,14 @@ io.on('connect', (socket) => {
 
   console.log("connect");
 
+  /*
   datas = [];
   for(let i = 0; i < 24; i ++){
     datas.push(samples(base));
   }
+  */
 
-  socket.emit('get', datas);
+  socket.emit('get', samples(base));
 
   // user moves
   socket.on("update", (data) => {
