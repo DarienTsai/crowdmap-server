@@ -14,7 +14,8 @@ const io = require('socket.io')(http);
 var PORT = 5000;
 
 // Sample data for demo
-var base = [33.998470127751006, -117.94746979872437];
+var base = [33.986217
+  , -117.976242];
 const samples = require('./samples');
 
 
@@ -31,14 +32,14 @@ io.on('connect', (socket) => {
 
   console.log("connect");
 
-  /*
+  
   datas = [];
   for(let i = 0; i < 24; i ++){
     datas.push(samples(base));
   }
-  */
+  
 
-  socket.emit('get', samples(base));
+  socket.emit('get', datas);
 
   // user moves
   socket.on("update", (data) => {
